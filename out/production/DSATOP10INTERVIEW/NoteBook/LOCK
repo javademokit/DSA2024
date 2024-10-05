@@ -1,0 +1,42 @@
+Class Level Lock is a mechanism where every class in java has a unique lock which is nothing but a class level lock. If a thread wants to execute a static synchronized method then the thread requires a class level lock once the thread gets a class level lock then it is allowed to execute any static synchronized method of that class. Once method execution completes automatically thread releases the lock. While a thread executing a static synchronized method the remaining thread is not allowed to execute any static synchronized method of that class simultaneously.
+
+
+Object Level Lock is a mechanism where every object in java has a unique lock which is nothing but an object–level lock. If a thread wants to execute a synchronized method on the given object then the thread first required the object level lock once the thread gets object level lock then it is allowed to execute any synchronized method on the given object and once the method execution completed automatically thread releases the lock of that object.
+
+
+Class Level Lock
+
+Object Level Lock
+
+This lock can be used when we want to prevent multiple threads to enter the synchronized block of available instances on runtime. 	This lock is used when we want a non-static method or non-static block of our code should be accessed by only one thread at a time.
+This lock is used to make static data thread-safe.	This lock is used to make non-static data thread-safe.
+Multiple objects of a particular class may exist but there is always one class’s class object lock available.	Every object the class have their own lock.
+We can get a class level lock as follows:
+
+public class GFG {
+
+  public void m1( ) {
+
+     synchronized (GFG.class) {
+
+    // some line of code
+
+  }
+
+}
+
+We can get object level lock as follows:
+
+public class GFG {
+
+  public void m1( ) {
+
+     synchronized (this) {
+
+        // some line of code
+
+     }
+
+  }
+
+}
