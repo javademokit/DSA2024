@@ -40,3 +40,30 @@ public class GFG {
   }
 
 }
+
+
+Difference Between Mono and Flux in Spring WebFlux
+
+
+Spring WebFlux is a part of the Spring Framework that provides reactive programming support for web applications. It introduces reactive types like Mono and Flux publishers which are fundamental to Its programming model. Mono and Flux play a crucial role in reactive programming.
+
+In this article, we will explore Mono vs Flux.
+
+Mono
+Creation: A Mono can be created by using static methods like Mono.just() or Mono.empty() or Mono.error()
+Subscription: The subscriber subscribes to the Mono triggering the execution of the pipeline.
+Emission: The Mono publisher emits zero or one item followed by an onComplete or onError signals
+Operators: Various operators can transform the emitted item, handle errors, or perform side-effects
+Advantages:
+Simplicity: Ideal for operations that return a single result or none.
+Performance: Efficient handling of single-value streams with minimal overhead.
+Error Handling: Comprehensive error handling capabilities with operators like onErrorReturn and onErrorResume.
+Flux
+Creation: A Flux can be created by using static methods like Flux.just() or Flux.fromIterable() or Flux.range()
+Subscription: The subscriber subscribes to the Flux triggering the execution of the pipeline.
+Emission: The Mono publisher emits zero to N items followed by an onComplete or onError signals
+Operators: Various operators can transform the emitted items, handle errors, buffer, window, or combine multiple Flux streams
+Advantages:
+Flexibility: Capable of handling multiple items, making it suitable for collections, streams, and real-time data.
+Rich Operators: Extensive set of operators to manipulate and transform data streams, including buffer, window, merge, zip, etc.
+Scalability: Efficiently manages large data streams with built-in Backpressure support.
