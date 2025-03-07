@@ -1,0 +1,23 @@
+1. Intermediate Operations:
+Intermediate operations transform a stream into another stream. Some common intermediate operations include:
+
+filter(): Filters elements based on a specified condition.
+map(): Transforms each element in a stream to another value.
+sorted():  Sorts the elements of a stream.
+
+
+2. Terminal Operations
+Terminal Operations are the operations that on execution return a final result as an absolute value.
+
+collect(): It is used to return the result of the intermediate operations performed on the stream.
+forEach(): It iterates all the elements in a stream.
+reduce(): It is used to reduce the elements of a stream to a single value.
+
+
+3. Short Circuit Operations
+
+Short-circuit operations provide performance benefits by avoiding unnecessary computations when the desired result can be obtained early. They are particularly useful when working with large or infinite streams.
+
+anyMatch(): it checks the stream if it satisfies the given condition.
+findFirst(): it checks the element that matches a given condition and stops processing when it finds it.
+Note: They are lazy, meaning they are not executed until a terminal operation is invoked.

@@ -1,0 +1,15 @@
+In Java, if you want to create an object of a final inner class, you can do so just like any other inner class. However, since the inner class is non-static,
+you must first create an instance of the outer class.
+
+
+
+It looks like you're asking about creating an instance of a final inner class in Java. Could you clarify whether you're referring to:
+
+A final inner class (non-static) inside another class
+A final static nested class
+A final local inner class (inside a method)
+A final anonymous inner class
+I'll cover all these cases briefly:
+
+1. Final Inner Class (Non-Static)
+If you declare an inner class as final, it means it cannot be extended. To create an object of it, you need an instance of the outer class.
